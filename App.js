@@ -1,12 +1,18 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import SMSDetector from './SMSDetector';
+import NotListening from './NotListening';
 
 const App = () => {
-  return (
-    <View style={styles.container}>
-      <SMSDetector />
-    </View>
+  return ( 
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={NotListening}
+          options={{title: 'Welcome'}}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
